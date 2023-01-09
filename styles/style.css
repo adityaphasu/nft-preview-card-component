@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+--soft-blue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+--very-dark-blue1: hsl(217, 54%, 11%);
+--very-dark-blue2: hsl(216, 50%, 16%);
+--very-dark-blue3: hsl(215, 32%, 27%);
+--very-dark-blue4: hsl(219, 64%, 9%);
+--white: hsl(0, 0%, 100%);
+}
+
+/* GLOBAL */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--very-dark-blue1);
+    color: var(--soft-blue);
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+h2{
+    color: var(--white);
+    margin: 1rem 0;
+}
+
+p{
+    font-size: 1rem;
+}
+
+p,
+h2{
+    overflow-wrap: break-word ;
+}
+
+hr{
+    border: 0.5px solid var(--very-dark-blue3);
+}
+
+/* CARD */
+
+.card{
+    max-width: 21rem;
+    background-color: var(--very-dark-blue2);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 1px 10px 10px 5px var(--very-dark-blue4);
+}
+
+/* IMAGE */
+
+.nft-img-container{
+    position: relative;
+}
+
+
+.nft-img,.overlay{
+    border-radius: 10px;
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    background-color: var(--cyan);
+}
+
+.icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.nft-img-container:hover .overlay{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.nft-img-container:hover .overlay+.icon{
+    display: block;
+}
+
+
+
+/* RATE AND TIME */
+
+.rate-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rate-time p{
+    padding: 1rem 0.2rem;
+}
+
+.etherium > *,
+.time-left > *,
+.creator > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.etherium{
+    color: var(--cyan);
+}
+
+
+/* CREATOR */
+
+.creator{
+    padding-top: 1rem; 
+}
+
+.creator img{
+    height: 40px;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+
+.creator p{   
+    padding: 0 0.5rem;
+}
+
+.creator p span{
+    color: var(--white);
+}
+
+/* HOVER */
+
+.highlight:hover{
+    color: var(--cyan);
+}
+
+
+/* SCR-ONLY H1 */
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
