@@ -24,7 +24,6 @@ body{
     align-items: center;
     min-height: 100vh;
     line-height: 1.5;
-    font-size: 1rem;
     font-family: 'Outfit', sans-serif;
     background-color: var(--very-dark-blue1);
     color: var(--soft-blue);
@@ -38,6 +37,7 @@ img{
 h2{
     color: var(--white);
     margin: 1rem 0;
+    font-size: 1.4rem;
 }
 
 p{
